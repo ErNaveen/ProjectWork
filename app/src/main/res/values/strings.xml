@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Last.fm.</string>
+    <string name="loading_text">Loading...</string>
+    <string name="alert_message">Message</string>
+</resources>

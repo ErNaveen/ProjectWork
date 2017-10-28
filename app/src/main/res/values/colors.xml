@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_background">#A3498B</color>
+    <color name="color_background_green">#00441e</color>
+
+    <color name="color_light_green">#009641</color>
+    <color name="color_hint">#50686565</color>
+    <color name="color_edit_text_border">#D7D7D7</color>
+    <color name="button_background_grey">#50D7D7D7</color>
+    <color name="color_card_view">#f3f2f2</color>
+    <color name="color_text">#686565</color>
+    <color name="color_black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_divider">#ebebeb</color>
+</resources>
