@@ -10,34 +10,35 @@
     android:orientation="vertical"
     android:padding="7dp">
 
-        <LinearLayout
-            android:id="@+id/linearLayoutRoot"
+    <LinearLayout
+        android:id="@+id/linearLayoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageViewProfile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="5dp"
-            android:background="@drawable/selector"
-            android:weightSum="1">
+            android:layout_weight=".7"
+            android:src="@drawable/ic_account_circle" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/circleImageViewProfile"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight=".7"
-                android:src="@drawable/ic_account_circle" />
+        <TextView
+            android:id="@+id/textViewArtistNAme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight=".3"
+            android:gravity="center|left"
+            android:maxLines="2"
+            android:text="ArtistName"
+            android:textColor="@color/color_black"
+            android:textSize="20dp" />
 
-            <TextView
-                android:id="@+id/textViewArtistNAme"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight=".3"
-                android:gravity="center|left"
-                android:text="ArtistName"
-                android:textColor="@color/color_black"
-                android:textSize="20dp" />
-
-        </LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

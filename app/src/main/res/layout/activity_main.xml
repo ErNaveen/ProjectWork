@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
     tools:context="com.henote.lastfm.MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -30,6 +32,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
         android:gravity="center_horizontal"
+
         android:orientation="vertical">
 
         <LinearLayout
@@ -60,15 +63,7 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/noRecord"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="No Artist Found"
-            android:textColor="@color/color_black"
-            android:visibility="gone" />
-
+        
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerViewList"
             android:layout_width="match_parent"

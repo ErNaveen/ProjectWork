@@ -10,6 +10,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -46,8 +47,6 @@ public class MainActivity extends AppCompatActivity implements ArtistListOnClick
     EditText editTextArtistName;
     @BindView(R.id.recyclerViewList)
     RecyclerView recyclerViewList;
-    @BindView(R.id.noRecord)
-    TextView noRecord;
 
 
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -121,12 +120,12 @@ public class MainActivity extends AppCompatActivity implements ArtistListOnClick
                     JSONObject jsonObject = jsObject.getJSONObject("results").getJSONObject("artistmatches");
                     //Log.d(TAG, "artistArray Object: " + jsonObject.toString());
                     list.addAll(ArtistListParser.parseArtist(jsonObject));
-                    //Log.d(TAG, "list size:  " + String.valueOf(list.size()));
+                    Log.d(TAG, "list size:  " + String.valueOf(list.size()));
                     if (list.size() > 0) {
                         //editTextArtistName.setText(null);
                         artistListAdapter.setDataChange(list);
                     } else {
-                        noRecord.setVisibility(View.VISIBLE);
+                        new CustomDialog(context, "No Artist Found.");
                     }
 
                 } catch (Exception e) {
