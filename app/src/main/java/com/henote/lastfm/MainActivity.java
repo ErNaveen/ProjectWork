@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements ArtistListOnClick
     RecyclerView recyclerViewList;
     @BindView(R.id.noRecord)
     TextView noRecord;
-    private NestedScrollView scrollView;
+
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private Context context;
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements ArtistListOnClick
                     JSONObject jsonObject = jsObject.getJSONObject("results").getJSONObject("artistmatches");
                     //Log.d(TAG, "artistArray Object: " + jsonObject.toString());
                     list.addAll(ArtistListParser.parseArtist(jsonObject));
-                    Log.d(TAG, "list size:  " + String.valueOf(list.size()));
+                    //Log.d(TAG, "list size:  " + String.valueOf(list.size()));
                     if (list.size() > 0) {
                         //editTextArtistName.setText(null);
                         artistListAdapter.setDataChange(list);
